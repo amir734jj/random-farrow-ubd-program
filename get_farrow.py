@@ -45,8 +45,15 @@ def random_expr(var_pool, declared, force_good=False):
     num_terms = random.choices([1, 2, 3], weights=[2, 5, 3])[0]
 
     for i in range(num_terms):
+        op = None
         if i > 0:
-            parts.append(random.choice(OPS))
+            op = random.choice(OPS)
+            parts.append(op)
+
+        # Divisor must always be a non-zero literal to avoid divide-by-zero
+        if op == "/":
+            parts.append(str(random.randint(1, 100)))
+            continue
 
         use_literal = random.random() < 0.3
         if use_literal:
@@ -68,10 +75,11 @@ def random_expr(var_pool, declared, force_good=False):
     return " ".join(parts)
 
 
-def generate_block(var_pool, declared, current_depth, target_depth, indent=0):
+def generate_block(var_pool, declared, current_depth, target_depth, indent=0, must_reach=True):
     """
     Generate a list of assignment statements (and nested blocks).
     Returns (lines, max_depth_reached).
+    must_reach: if True, guarantees this block eventually reaches target_depth.
     """
     lines = []
     pad = "  " * indent
@@ -80,23 +88,44 @@ def generate_block(var_pool, declared, current_depth, target_depth, indent=0):
     local_declared = set(declared)  # copy — scoping
     max_depth_reached = current_depth
 
-    kinds = []
-    for _ in range(num_stmts):
-        if current_depth < target_depth:
-            kinds.append(random.choices(
-                [Kind.GOOD, Kind.UBD, Kind.DUP, Kind.BLOCK],
-                weights=[50, 17, 17, 16]
-            )[0])
+    if current_depth < target_depth:
+        if must_reach:
+            # Guarantee exactly one BLOCK on the spine; other statements may include BLOCKs freely
+            kinds = [Kind.BLOCK] + [
+                random.choices(
+                    [Kind.GOOD, Kind.UBD, Kind.DUP, Kind.BLOCK],
+                    weights=[50, 17, 17, 16]
+                )[0]
+                for _ in range(num_stmts - 1)
+            ]
+            random.shuffle(kinds)
         else:
-            kinds.append(random.choices(
+            kinds = [
+                random.choices(
+                    [Kind.GOOD, Kind.UBD, Kind.DUP, Kind.BLOCK],
+                    weights=[50, 17, 17, 16]
+                )[0]
+                for _ in range(num_stmts)
+            ]
+    else:
+        kinds = [
+            random.choices(
                 [Kind.GOOD, Kind.UBD, Kind.DUP],
                 weights=[50, 25, 25]
-            )[0])
+            )[0]
+            for _ in range(num_stmts)
+        ]
+
+    spine_used = not must_reach  # track whether the must_reach BLOCK has been consumed
 
     for kind in kinds:
         if kind == Kind.BLOCK:
             lines.append(f"{pad}{{")
-            inner, inner_depth = generate_block(var_pool, local_declared, current_depth + 1, target_depth, indent + 1)
+            # The first BLOCK in a must_reach context is the spine; others are free
+            child_must_reach = must_reach and not spine_used
+            if child_must_reach:
+                spine_used = True
+            inner, inner_depth = generate_block(var_pool, local_declared, current_depth + 1, target_depth, indent + 1, must_reach=child_must_reach)
             lines.extend(inner)
             lines.append(f"{pad}}}")
             max_depth_reached = max(max_depth_reached, inner_depth)
@@ -129,12 +158,9 @@ def generate_block(var_pool, declared, current_depth, target_depth, indent=0):
 
 def generate_program(depth=2):
     num_vars = 5 + depth * 5
-    while True:
-        var_pool = make_var_pool(num_vars)
-        declared = set()
-        lines, achieved = generate_block(var_pool, declared, current_depth=0, target_depth=depth)
-        if achieved == depth:
-            break
+    var_pool = make_var_pool(num_vars)
+    declared = set()
+    lines, _ = generate_block(var_pool, declared, current_depth=0, target_depth=depth)
 
     header = f"// Validating Farrow's use-before-declaration (depth={depth}, vars={num_vars})"
     return header + "\n" + "\n".join(lines)
