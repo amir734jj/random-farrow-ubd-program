@@ -1,0 +1,726 @@
+// Validating Farrow's use-before-declaration (depth=30, vars=155)
+du = 43 + 81 / 93;
+{
+  {
+    bz = 41 + du * 55;
+    bz = bz + bz + 72;
+    {
+      du = du / 61;
+      g = aa * aw;
+      du = g * bz;
+      bz = du / 23;
+      {
+        g = 61;
+        t = dn + 95;
+        {
+          {
+            dw = bz - t;
+            cs = 46 * g / 95;
+            dr = 28 - an;
+            {
+              dr = v + 44;
+              {
+                ag = 41 + bb;
+                l = eo / 38;
+                {
+                  er = dw / 18;
+                  eh = du;
+                  eh = cc + a * cc;
+                  bs = bv + 65;
+                  cn = dw + cs + bz;
+                  {
+                    ar = di - eq;
+                    at = bz + dr * t;
+                    ba = cs - bz - 55;
+                    bj = cc + e;
+                    {
+                      da = g - 100 / 33;
+                      cl = eh + bj / 32;
+                      {
+                        bh = 55;
+                        {
+                          du = 88 * 88;
+                          y = 2 - 59;
+                          t = dr;
+                          k = ac * ct;
+                          af = 38;
+                          be = cl;
+                          {
+                            dv = at - ba;
+                            {
+                              bz = 62;
+                              cv = 33;
+                              {
+                                {
+                                  ed = 37 / 42 + eb;
+                                  {
+                                    {
+                                      bj = cn + 14 - 99;
+                                      {
+                                        {
+                                          cl = ar - bs;
+                                          ea = ed + ed;
+                                          d = 67 * ag / 31;
+                                          by = dp / 50 * 15;
+                                          h = at;
+                                          {
+                                            dt = bj - cs * l;
+                                            {
+                                              cd = ag * cs;
+                                              dy = 63 + 59 / 40;
+                                              ec = cs / 13;
+                                              {
+                                                eq = dy - er * 86;
+                                                aq = y;
+                                                {
+                                                  aw = 3 + at - h;
+                                                  {
+                                                    {
+                                                      {
+                                                        {
+                                                          an = h;
+                                                          x = aq;
+                                                          h = 64 / 19;
+                                                          {
+                                                            bw = w + dk * ac;
+                                                            ah = cs + aw;
+                                                            bn = 62 - da / 43;
+                                                            a = ba - bh;
+                                                          }
+                                                          g = 24 - bc / 81;
+                                                          o = 69 * bf;
+                                                        }
+                                                        {
+                                                          cd = br / 66;
+                                                          b = bv + cc;
+                                                          dx = 62 / 90 * 13;
+                                                        }
+                                                        c = ai + di;
+                                                        dk = 54 * 68;
+                                                        {
+                                                          ad = be + dv;
+                                                          ca = 71 * 23 / 6;
+                                                          cj = 95 * bl;
+                                                          g = 97 + t * cs;
+                                                          ea = t - d;
+                                                          eo = bw;
+                                                        }
+                                                        be = bc + n;
+                                                      }
+                                                      {
+                                                        ei = eb - 46;
+                                                        ao = 63 + bz;
+                                                        i = n + aj;
+                                                        ce = cv;
+                                                        b = dt / 28;
+                                                        ds = dy + ei - eq;
+                                                        ds = 86 * er + 63;
+                                                      }
+                                                      l = 20 - w;
+                                                      l = bj;
+                                                      di = da / 35;
+                                                    }
+                                                    {
+                                                      dx = 85 - eh * cv;
+                                                      dx = aw / 36;
+                                                      {
+                                                        ax = y;
+                                                        br = ba * 30;
+                                                        ca = 60;
+                                                        {
+                                                          p = 11 + g - eh;
+                                                          {
+                                                            p = k + 100;
+                                                            bs = bn + 64 * aa;
+                                                            c = br * dv * 13;
+                                                            a = dz + an;
+                                                            ep = da / 68;
+                                                            k = dv;
+                                                          }
+                                                          ao = av;
+                                                        }
+                                                      }
+                                                      ev = at;
+                                                      cm = 68 / 23;
+                                                    }
+                                                    bz = 26 * k;
+                                                  }
+                                                  ae = bz;
+                                                  bl = 14 - dr;
+                                                  cu = aq * h - eq;
+                                                }
+                                              }
+                                              ch = 98 * k;
+                                              bv = 9 + af;
+                                            }
+                                            cl = 17 - by - bz;
+                                            {
+                                              be = el;
+                                              am = cs - 100 - y;
+                                              {
+                                                cm = 78;
+                                                an = 70 * cl * 81;
+                                                ct = 69 + 90;
+                                                af = es * 97;
+                                              }
+                                            }
+                                            ek = 19 * 61;
+                                          }
+                                          dv = du / 37;
+                                        }
+                                        w = bk + u;
+                                        bl = el + ev;
+                                        cw = ca + c;
+                                        ab = dl + x;
+                                        ba = 6 + 61 + bc;
+                                      }
+                                      dq = da / 45 + 95;
+                                      ah = 81 * ed * at;
+                                    }
+                                    cf = ar - bh - 95;
+                                    az = 22 / 17;
+                                    bt = cl + 50 * cl;
+                                    bu = l - 5 * 69;
+                                  }
+                                  av = 81;
+                                  am = v - dp * 71;
+                                }
+                                ex = cs / 83;
+                                ca = cb - v * cu;
+                                bp = ba / 49;
+                                eb = t * bh;
+                              }
+                              ee = de * cg;
+                            }
+                            {
+                              p = l - at;
+                              en = ba * k;
+                              eg = 74 / 51;
+                            }
+                            cy = cl + cs - 23;
+                          }
+                        }
+                        {
+                          {
+                            by = ag;
+                            ek = 96;
+                            {
+                              {
+                                h = 64 + 62;
+                                cu = ba + t;
+                                m = ah * eu;
+                                dr = dw * dw * 77;
+                                f = bz;
+                              }
+                              du = cl - l;
+                              w = dc / 45 + j;
+                              cc = ag * dr - 75;
+                              {
+                                {
+                                  ea = bh + 40 + 59;
+                                  {
+                                    bk = at - er;
+                                    bh = 43 / 22;
+                                    dr = dw - 64;
+                                    cs = 29 - ar * 28;
+                                  }
+                                  w = eh * 38;
+                                  ci = 99 + cn;
+                                }
+                                bm = 98;
+                                {
+                                  aw = dz + 89 - cy;
+                                  dn = l - du + cl;
+                                  aw = eh - bs * cs;
+                                }
+                                an = bz;
+                              }
+                            }
+                            cq = bs / 39;
+                            er = cs + ek / 54;
+                            h = ag / 9 * by;
+                            cm = 23 * cl * 53;
+                          }
+                          {
+                            ej = 77 - 30;
+                            ex = 82 + 45 + 59;
+                            {
+                              bf = i * ax + bc;
+                              ew = bj;
+                              ev = cp + 96;
+                              ej = l * eh;
+                              {
+                                {
+                                  m = l;
+                                  ah = g + dw / 50;
+                                  ag = bh / 57 * bs;
+                                  bq = be;
+                                  db = cn * bq;
+                                  {
+                                    dz = 49 / 88;
+                                    p = v - al + ei;
+                                    ck = dz + ar;
+                                  }
+                                  bx = bs * du;
+                                }
+                                ej = ev / 49 + bh;
+                                z = em + dk;
+                                dt = bj;
+                                {
+                                  {
+                                    ak = bs + 21;
+                                    m = af - k / 66;
+                                    cd = ev / 88;
+                                    cl = 64 / 10;
+                                    eh = cl - ba;
+                                    t = ew * 76;
+                                  }
+                                  cz = j * bm * 62;
+                                  eb = ea;
+                                  dg = 26;
+                                  ba = ag + 81 / 35;
+                                  dw = af / 32;
+                                  dc = dr;
+                                }
+                              }
+                            }
+                          }
+                          g = 21 + l;
+                          {
+                            {
+                              {
+                                bj = 10 / 6;
+                                l = bh * t;
+                                g = bs;
+                                bb = 17 - l;
+                                am = ei - dx + k;
+                                y = bj * 11;
+                              }
+                              bl = da - eh;
+                              ah = cs * at;
+                              bk = v;
+                              dx = d / 45;
+                              {
+                                ad = du - 23;
+                                df = 32 - g;
+                                bh = cs * 45;
+                                n = 6;
+                              }
+                            }
+                            {
+                              a = er;
+                              cl = ad + be;
+                              co = du * eh;
+                            }
+                            cz = ag * 71;
+                          }
+                          bc = bs * 100;
+                          ae = 14 * g + cl;
+                          a = 78 + 29;
+                        }
+                      }
+                      {
+                        an = 17;
+                        eo = ba - ar + 99;
+                        dx = bs + bj;
+                        e = dr * dx;
+                        bu = cl;
+                      }
+                    }
+                    ah = 32;
+                    ah = er / 23 * 11;
+                  }
+                  er = cs;
+                }
+              }
+              ac = 79 * bz + dw;
+              cr = ac - t;
+              aq = g;
+              {
+                ev = 53;
+                {
+                  ev = ev - cs;
+                  t = aq - 17;
+                  ah = ac - ac;
+                  bu = cb * ey + ce;
+                }
+                aq = ac * bz;
+                cg = cs;
+                f = az - eo;
+              }
+            }
+            cr = dw / 57;
+            {
+              {
+                ct = dw * 70;
+                ds = bz;
+                cc = 54 * 55 - 60;
+                u = du + dr;
+                dc = 93 * t * 63;
+                ay = cw / 46;
+              }
+              er = df;
+              {
+                z = du - dr;
+                {
+                  g = z + cs / 1;
+                  cq = z + dr * cs;
+                  es = 90 / 37;
+                  ex = 50 + r / 76;
+                  o = ex + ex * es;
+                  es = cs;
+                  ab = du + 68 * es;
+                }
+                du = 78;
+                {
+                  ba = 91 + bz;
+                  ap = ef * 32;
+                  de = ap / 17;
+                  ba = de / 74;
+                }
+                ak = 33 + dr;
+                ek = au;
+              }
+              {
+                {
+                  dm = 78 / 75 * bz;
+                  db = 24 + 56 / 37;
+                  br = g;
+                  {
+                    cb = db - dr + br;
+                    {
+                      ad = dh + a;
+                      eh = dm / 21 * g;
+                      {
+                        ar = cr + dw;
+                        ao = 92 / 33;
+                        bl = 14;
+                        ar = ao + 6;
+                        j = dw * db;
+                      }
+                      dl = bt * bx * 35;
+                      ae = cb;
+                      av = g / 47 * dr;
+                      bt = dr + ad + 92;
+                    }
+                    {
+                      cr = bz + 38;
+                      db = cj * ar * dv;
+                      dz = cb / 21 - br;
+                      di = ac / 80 * 82;
+                      {
+                        ap = 56 - eq;
+                        dm = cb - br;
+                        am = bz;
+                        cp = er / 47;
+                      }
+                      ci = cb * 69 + dw;
+                    }
+                    bj = 55 + dr;
+                    er = bz / 59;
+                    ap = 77 / 6;
+                  }
+                  er = cr + 75;
+                }
+                dw = dw / 68;
+                n = du;
+              }
+              cn = cs + dr;
+              e = g + 5 - dw;
+            }
+          }
+          ee = g / 49;
+          aq = g * 76 / 94;
+        }
+        {
+          da = 31 - g;
+          cw = ay + bg;
+          bz = da;
+        }
+        k = du;
+        bz = 70 / 60 / 64;
+      }
+      cs = g / 52;
+      em = 8 * 92;
+    }
+    {
+      dw = 2 / 70;
+      eo = 96 - du;
+      {
+        dj = eo / 69;
+        h = du / 44;
+        {
+          aw = 52 * h;
+          dl = 86 + du;
+          {
+            cp = 58;
+            {
+              cp = 85 - 66;
+              {
+                aa = dl - 49 + dw;
+                {
+                  ap = cp;
+                  bp = 26;
+                  ds = dj * ap;
+                  bv = 16 / 60 / 53;
+                }
+                {
+                  p = dl - aa;
+                  be = cw * by + 47;
+                  dl = dl + 91;
+                  {
+                    dj = 50 / 45;
+                    db = dj - eo * bz;
+                    ex = be * bz;
+                    bl = eo * du - aa;
+                    br = bz * bz;
+                  }
+                  w = 67;
+                }
+                dj = 46;
+                ef = bz;
+                cf = 71 / 100;
+              }
+              en = aw + dl;
+              {
+                j = cp - eo * en;
+                cy = du / 4 / 85;
+                {
+                  du = dw * bz;
+                  g = ed / 62;
+                  eb = eo + cy;
+                  dw = 81;
+                  bc = 95 - 44;
+                  ca = en - bc * g;
+                  {
+                    cr = ck / 84;
+                    g = 82 + 67;
+                    at = g / 12;
+                  }
+                }
+                o = eo * cp;
+                el = en;
+                cp = 53;
+              }
+              bl = cc / 23;
+            }
+            dd = al * ds;
+          }
+          c = dl;
+        }
+        br = bz;
+        p = eo;
+        {
+          {
+            ch = dj / 79;
+            e = ch;
+            z = 61;
+            cc = br / 3;
+            ar = e - 33 / 6;
+            bk = z - eo;
+          }
+          eg = du - 41;
+          ax = ad * aq;
+          {
+            br = 92 - eo + bz;
+            ao = dj;
+            br = dw + ao;
+            {
+              ep = 30;
+              ad = eo * dw;
+              cm = bw;
+              {
+                bj = eg * p;
+                {
+                  ee = 24;
+                  at = p;
+                  cq = ax / 36;
+                }
+                {
+                  bx = r + 22 - n;
+                  cc = ep / 62;
+                  cl = ep;
+                  ad = bx + cl;
+                  ar = du - cm + bj;
+                  bz = 39 + ao;
+                  by = ax - h;
+                }
+                er = ad;
+                ce = eg / 62;
+                aq = du * er + du;
+              }
+              at = ad;
+              ct = 55 + 39 + ax;
+              eh = ad;
+            }
+            au = ao;
+            er = dj;
+            er = bz;
+          }
+          {
+            ce = eo * 86;
+            r = 17 + ce - dj;
+            {
+              as = 10 - 66;
+              p = eg / 28 / 87;
+              cz = dw;
+              ai = ax * as * eg;
+              p = 51 - r;
+            }
+            ai = 68 * r;
+          }
+        }
+        {
+          {
+            ds = br * dj;
+            cf = ds / 99;
+            cx = h * du / 51;
+            bz = 73 / 53 * br;
+            da = cv + aw;
+            {
+              bg = dw / 8 * dw;
+              ef = dw + du;
+              {
+                eb = 87;
+                bb = eq / 96;
+                ag = bg / 18;
+                ay = bg * 50 / 62;
+                bq = k / 98;
+                aj = da;
+              }
+              ei = 12;
+              ef = 73 / 74;
+              ep = ei - cx;
+            }
+          }
+          ci = br;
+          cx = 46 - dw;
+          bi = h;
+          ad = ci + bi;
+        }
+      }
+      ap = dw / 66;
+    }
+    bb = du;
+  }
+  du = du / 64;
+  cw = 97 - du;
+  bg = du * cw;
+  {
+    {
+      cd = du - du / 30;
+      du = bg + 15 - 90;
+      cg = du / 22;
+      du = 82 * cg;
+      {
+        ad = bg * cd * 66;
+        a = du * du;
+        ev = 46 / 90;
+      }
+    }
+    {
+      cw = du + 74;
+      {
+        s = du + 93;
+        c = bg + s;
+        cs = bg * 72;
+        ee = 65 - 51;
+        cu = 85 - 15 - 54;
+        af = s + 98;
+        {
+          {
+            an = 18 / 14 + af;
+            cw = bg;
+            cv = bt;
+            {
+              cf = af * cv;
+              {
+                bx = bg + s;
+                bx = 36 / 47;
+                cs = 85;
+                ee = 74 + 100;
+                p = s - bg;
+                {
+                  cf = du + bx;
+                  ds = cf - bg;
+                  cz = cs;
+                  cq = bg - du;
+                  bi = s - c / 26;
+                  {
+                    {
+                      cf = 14 * p * s;
+                      {
+                        p = 76 + ds * 65;
+                        {
+                          bg = s * bg;
+                          du = bg * af;
+                          dj = 45 + 42 * an;
+                        }
+                        eb = bk;
+                        ch = an / 77 * cf;
+                        l = 74 + cw * eb;
+                      }
+                      dw = 32;
+                      {
+                        cv = af * cw;
+                        df = cu;
+                        {
+                          cq = du - 33 - cq;
+                          bs = c / 75;
+                          cy = n + 38;
+                        }
+                        ay = eq - 81;
+                        c = cs * ds + 24;
+                      }
+                      s = cw;
+                      ec = bg / 17 - bx;
+                    }
+                    cw = bg + 96;
+                    ah = cw - 46;
+                    {
+                      w = bx - bg + an;
+                      {
+                        cc = w / 18 * ds;
+                        as = cq * ds;
+                        bp = ds - 21 * p;
+                        eg = ef + at;
+                        bb = bf * 31;
+                      }
+                      j = 74 / 46;
+                      aq = s + bg * 63;
+                      cf = 90 / 13 / 98;
+                    }
+                    h = 90 / 58;
+                    z = c - 45;
+                  }
+                  bq = ee * s;
+                }
+                cz = cv;
+              }
+              dq = 26;
+            }
+            ei = 83 + 78;
+          }
+          bi = 89 - 59;
+          cd = 8;
+          ei = 92 / 32 + cs;
+        }
+      }
+      {
+        dn = 48 + ci;
+        cw = 39 * cw;
+        bg = 94 / 62 + dn;
+        dn = bg / 90;
+        cz = dn / 97 - 43;
+      }
+    }
+    ce = cw;
+  }
+  ag = 73 * 58;
+}
+es = du + du / 21;
+{
+  bm = es - 71;
+  cq = ck - y;
+  ef = cq + 73;
+}

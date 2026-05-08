@@ -1,0 +1,180 @@
+// Validating Farrow's use-before-declaration (depth=10, vars=55)
+ad = aj - 51 * aw;
+f = ad * ad;
+ak = 5 - ad;
+{
+  f = ak - ak;
+  c = ak + f;
+  f = c / 77 / 77;
+  {
+    f = f + c - f;
+    az = c - 78;
+    am = 74 / 49;
+    {
+      {
+        {
+          {
+            {
+              as = 4;
+              au = az;
+              aq = 70;
+              {
+                {
+                  {
+                    ad = 27 + c;
+                    ab = ao - e / 83;
+                    af = ak * ab;
+                    au = 71 - aq - ak;
+                  }
+                  ae = am / 30;
+                  x = az + au;
+                  al = aw;
+                  ac = c;
+                  y = 49 - ay / 80;
+                  ah = 97 - 89 * ae;
+                }
+                {
+                  al = d - 4 - s;
+                  ap = au + 1 * am;
+                  f = c + al;
+                  d = 20 * 15 - 99;
+                  {
+                    bb = aq / 56;
+                    f = 98 * d;
+                    r = as;
+                    an = c / 98;
+                    aw = d;
+                    o = c / 89 - c;
+                    h = 72 / 75;
+                  }
+                  {
+                    ai = p + 26;
+                    az = ap / 59 * au;
+                    a = 48 + 57 + c;
+                    ag = 27 * n;
+                    z = ag - ai;
+                  }
+                  aw = al / 56;
+                }
+                {
+                  {
+                    ay = 19 * 1;
+                    k = as / 13;
+                    ay = 70 + 56;
+                    f = 34 / 37;
+                    ar = au;
+                  }
+                  a = aq / 92;
+                  {
+                    z = 85 / 50;
+                    c = ai;
+                    j = aq;
+                    y = 93 * ag;
+                    e = 2 + am * au;
+                  }
+                  {
+                    g = 81 * 60 - am;
+                    f = g / 93;
+                    am = 51 - a * a;
+                    r = 2 * aq * au;
+                    b = am + au - au;
+                    t = 22;
+                  }
+                }
+                ar = aq + 74;
+                ai = at + x / 28;
+              }
+              au = 44 / 28 * aq;
+              ai = u * ae;
+            }
+            {
+              {
+                o = 7 / 55 / 54;
+                b = 16 * ab;
+                {
+                  ae = az / 96;
+                  u = 20 / 93;
+                  bb = az / 14;
+                  {
+                    i = o - c;
+                    t = i / 70;
+                    v = aq;
+                    n = ae / 68 + 20;
+                    f = az + v * f;
+                  }
+                  ao = 88 / 90 * 95;
+                }
+                am = 35 * 36;
+                aa = ak * ak;
+              }
+              an = aa + 94 - 12;
+              {
+                t = 64 * am;
+                as = c + t - 35;
+                bb = ap - ay;
+              }
+            }
+            t = f;
+          }
+          {
+            af = af / 33;
+            at = am + am;
+            ae = f * ak * am;
+            w = 44;
+          }
+          c = ad - f * 58;
+          ad = f * 74;
+          p = ak / 87 - ad;
+          az = ad;
+          ad = 50 / 29 * am;
+        }
+        m = 40;
+        {
+          {
+            aw = ah - k;
+            {
+              bb = 100 + az;
+              b = ak + c;
+              az = ae - o - p;
+              ad = f / 61 - aw;
+              p = ar - 36;
+              aq = at + h * aq;
+            }
+            aa = ad + az;
+            v = f - aa;
+            g = 27 * az * 48;
+          }
+          bc = 67;
+          ag = q - ap + an;
+          aq = ak * az;
+        }
+        e = c + 8;
+        i = e + am;
+        ax = 92;
+        ak = 73 * 88;
+      }
+      av = 83 - ak * az;
+      {
+        y = as * w;
+        h = 75;
+        e = am / 47;
+        av = 89 / 52 - a;
+        ad = ap;
+        {
+          e = e;
+          az = 28 * bc - 93;
+          ae = 19 - y;
+          c = bb * d;
+          e = f + ae;
+        }
+        ae = av - y * 36;
+      }
+      ao = c + am;
+    }
+    ad = az * am;
+    f = c * c;
+  }
+}
+af = 48 / 81;
+ay = 32 + af / 40;
+y = af * ad / 88;

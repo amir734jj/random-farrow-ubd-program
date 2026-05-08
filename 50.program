@@ -1,0 +1,706 @@
+// Validating Farrow's use-before-declaration (depth=50, vars=255)
+be = 89 * 21 * 29;
+{
+  {
+    gu = 47 - be / 73;
+    {
+      {
+        x = gu + gu;
+        {
+          dr = 15;
+          cb = 53 - 79 - gu;
+          dr = 55 + x;
+          {
+            fr = ga - g - ho;
+            {
+              {
+                gu = gu + cb;
+                fw = 43 - be;
+                df = fr + x;
+                {
+                  gu = dr;
+                  hq = cb / 82 - dr;
+                  fw = hq * df;
+                  cq = 95 / 67;
+                  w = hu - gk;
+                  {
+                    bv = cu - dx - aa;
+                    cg = x;
+                    k = 59 / 73;
+                    {
+                      cj = da;
+                      ie = df / 99;
+                      h = ig + 87 * 65;
+                      hh = hx - 20 / 96;
+                      {
+                        hy = bv / 2;
+                        k = bv - 40 - bv;
+                        {
+                          ae = bs / 33;
+                          cm = cq + ae;
+                          {
+                            {
+                              di = 81 / 34;
+                              ac = bv + cq * hy;
+                              az = 42 * gu / 9;
+                              de = gu * 38;
+                              {
+                                fo = h + 61;
+                                {
+                                  {
+                                    gj = w + 100;
+                                    {
+                                      x = 84 - dr;
+                                      {
+                                        {
+                                          fm = de + 91 + be;
+                                          am = fw * 7;
+                                          y = be + de + ie;
+                                          bg = 24 + am * ac;
+                                          {
+                                            ah = hq / 29;
+                                            dm = h * 97;
+                                            by = 18;
+                                            {
+                                              dp = cj - fr * de;
+                                              {
+                                                hg = 53 * 15;
+                                                hb = id / 28 / 69;
+                                                {
+                                                  ha = hb;
+                                                  bi = 10 - 7 + y;
+                                                  ft = 42 + hj;
+                                                  {
+                                                    {
+                                                      cb = fr / 88 / 72;
+                                                      ir = be + w;
+                                                      {
+                                                        gq = h - dr;
+                                                        aw = fw * 63;
+                                                        {
+                                                          {
+                                                            gr = 93 / 23;
+                                                            {
+                                                              ew = fr;
+                                                              cg = gj / 55;
+                                                              {
+                                                                {
+                                                                  dt = cg - cb;
+                                                                  d = 36 + 32 * ah;
+                                                                  hx = gr;
+                                                                  ih = 69 / 69 * hq;
+                                                                  {
+                                                                    hs = 25 * ae;
+                                                                    hu = x * hy;
+                                                                    de = bg;
+                                                                    gt = 86 - hq;
+                                                                    {
+                                                                      dw = w + hy;
+                                                                      gh = 64 - 59;
+                                                                      {
+                                                                        ek = gr;
+                                                                        w = hy + gr;
+                                                                        {
+                                                                          bn = ae * cq;
+                                                                          gj = gu - fo;
+                                                                          fu = w;
+                                                                          ba = by * 27 + ft;
+                                                                          {
+                                                                            ec = hh;
+                                                                            gr = k - h;
+                                                                            fv = df;
+                                                                            s = fv - ih * 82;
+                                                                            {
+                                                                              {
+                                                                                ck = em - 7 + is;
+                                                                                cx = 25 * fu;
+                                                                                {
+                                                                                  {
+                                                                                    ba = d / 48;
+                                                                                    ch = gh * di;
+                                                                                    {
+                                                                                      ik = fm / 82;
+                                                                                      dw = gh / 30 - hu;
+                                                                                      {
+                                                                                        ei = eu / 96;
+                                                                                        {
+                                                                                          y = 71 - 70;
+                                                                                          f = fu + 11;
+                                                                                          {
+                                                                                            de = 2 - cq;
+                                                                                            hg = am - 52;
+                                                                                            cj = gr + x;
+                                                                                            br = 95 * cq;
+                                                                                            k = cg / 58;
+                                                                                            {
+                                                                                              hm = 76 + i + eq;
+                                                                                              dm = dr / 89;
+                                                                                              gj = ay / 80;
+                                                                                              {
+                                                                                                ir = cq - cb;
+                                                                                                {
+                                                                                                  {
+                                                                                                    az = hh + dm;
+                                                                                                    ey = go * fd;
+                                                                                                    go = hs;
+                                                                                                    cz = bo * at;
+                                                                                                    cv = 17 * 79 + bi;
+                                                                                                    by = cb - 79;
+                                                                                                    gj = hb / 39 * 63;
+                                                                                                  }
+                                                                                                  he = 71 * ft - cb;
+                                                                                                  {
+                                                                                                    p = cg * 19 + gr;
+                                                                                                    cb = 35;
+                                                                                                    hx = 40;
+                                                                                                    er = fu / 58;
+                                                                                                    eh = 66;
+                                                                                                    cb = 78 - is / 54;
+                                                                                                    gp = hg - 4;
+                                                                                                  }
+                                                                                                  {
+                                                                                                    gg = bi + fm / 55;
+                                                                                                    bn = cg;
+                                                                                                    ih = 44;
+                                                                                                    iq = 49;
+                                                                                                    ig = fm - 81;
+                                                                                                  }
+                                                                                                }
+                                                                                                by = 63 - fv;
+                                                                                                ge = ih + dm - ek;
+                                                                                              }
+                                                                                              hk = 60;
+                                                                                              cd = fr;
+                                                                                            }
+                                                                                            ew = fw * y;
+                                                                                          }
+                                                                                          hj = 37 * ir;
+                                                                                          ho = 98 - 1;
+                                                                                          fq = ck - hu / 40;
+                                                                                        }
+                                                                                        do = hg + ch;
+                                                                                        x = 45 * am * 92;
+                                                                                      }
+                                                                                    }
+                                                                                    hu = hh / 39;
+                                                                                    {
+                                                                                      ai = 48 + ft;
+                                                                                      {
+                                                                                        ee = hq - 55;
+                                                                                        gh = 86 * s;
+                                                                                        au = 93 + fr;
+                                                                                        {
+                                                                                          cv = 53 + hs + ck;
+                                                                                          {
+                                                                                            dj = 17 - cm + gr;
+                                                                                            p = aw - 100;
+                                                                                            hg = cx / 87;
+                                                                                            dq = 78 - ec / 13;
+                                                                                            eo = ha - 22;
+                                                                                            fd = ch - cj + df;
+                                                                                          }
+                                                                                          bl = aw + gt / 77;
+                                                                                          cd = 37;
+                                                                                        }
+                                                                                        {
+                                                                                          af = de * d;
+                                                                                          {
+                                                                                            {
+                                                                                              he = ee + 37 + dp;
+                                                                                              eu = 52 - d / 1;
+                                                                                              {
+                                                                                                ae = 72 * 69 + 59;
+                                                                                                dp = af;
+                                                                                                gh = 97 - 59 - 78;
+                                                                                                gl = ee - 83 - dm;
+                                                                                                fj = cx;
+                                                                                                hf = ew / 4;
+                                                                                              }
+                                                                                            }
+                                                                                            ag = ie / 44 / 82;
+                                                                                            {
+                                                                                              {
+                                                                                                ef = 54 / 10;
+                                                                                                gy = ir;
+                                                                                                bv = fu - di - ew;
+                                                                                              }
+                                                                                              bd = k + ch / 5;
+                                                                                              ee = bd * ir;
+                                                                                              n = 58 / 61 / 91;
+                                                                                            }
+                                                                                            {
+                                                                                              {
+                                                                                                fv = hh + df;
+                                                                                                dg = fw / 80;
+                                                                                                ii = ae / 27;
+                                                                                                ch = bv;
+                                                                                                es = 30;
+                                                                                              }
+                                                                                              am = w - 19 + aw;
+                                                                                              gi = fo * 74;
+                                                                                            }
+                                                                                            ir = 35;
+                                                                                            {
+                                                                                              ao = 86 + bg;
+                                                                                              {
+                                                                                                bm = 13 + hq;
+                                                                                                cu = bm;
+                                                                                                z = al - 65;
+                                                                                                gd = hf / 27 * ay;
+                                                                                                cm = cx / 86;
+                                                                                                dg = 28 + ag;
+                                                                                                a = ch;
+                                                                                              }
+                                                                                              en = ho - er - 88;
+                                                                                              q = 87 / 32;
+                                                                                              dx = k / 36;
+                                                                                              ih = ds - v + v;
+                                                                                              ha = 8 + bi / 82;
+                                                                                            }
+                                                                                            ay = 94 - 17 * cm;
+                                                                                          }
+                                                                                          {
+                                                                                            {
+                                                                                              aq = 24 - fu;
+                                                                                              c = aq * ai;
+                                                                                              v = ie / 80 - di;
+                                                                                            }
+                                                                                            im = hb / 53;
+                                                                                            {
+                                                                                              hv = hy;
+                                                                                              m = 85;
+                                                                                              ds = 51 - ha;
+                                                                                              r = ba;
+                                                                                            }
+                                                                                            bp = 41 * hg;
+                                                                                            hp = 50 + fr / 100;
+                                                                                            ao = 15 - hg;
+                                                                                            i = 17;
+                                                                                          }
+                                                                                          br = 74 * 1 * ie;
+                                                                                          eb = ew / 11 / 75;
+                                                                                          b = it + bl;
+                                                                                          ax = fk * 88;
+                                                                                        }
+                                                                                        fr = ec + aw * aw;
+                                                                                      }
+                                                                                      dp = 20 / 85 + 97;
+                                                                                      if = cb * k;
+                                                                                    }
+                                                                                  }
+                                                                                  fl = fo / 26 / 27;
+                                                                                  eb = 56 / 37;
+                                                                                  n = ic;
+                                                                                  {
+                                                                                    gd = ee + cu;
+                                                                                    {
+                                                                                      gw = 41;
+                                                                                      {
+                                                                                        gp = i + ga + dz;
+                                                                                        ah = 59 * dj + eu;
+                                                                                        ai = hh;
+                                                                                      }
+                                                                                      o = i;
+                                                                                      bq = dr / 43;
+                                                                                      gb = ac + 90;
+                                                                                    }
+                                                                                    fy = gt - h;
+                                                                                    {
+                                                                                      dn = df;
+                                                                                      ga = fs / 70;
+                                                                                      aw = ek * 22;
+                                                                                      dj = ax * gs;
+                                                                                      gi = bv - d;
+                                                                                      es = hv + es;
+                                                                                      do = he + dy * cf;
+                                                                                    }
+                                                                                  }
+                                                                                  hw = fu * di - ck;
+                                                                                  cw = bi * 93;
+                                                                                }
+                                                                              }
+                                                                              fr = bn;
+                                                                              cb = cj - gq;
+                                                                              {
+                                                                                aq = ba * hq;
+                                                                                {
+                                                                                  fm = cq;
+                                                                                  he = 42 - ac * h;
+                                                                                  o = hx + cj;
+                                                                                  av = h / 4;
+                                                                                  o = 40 * by;
+                                                                                  fj = bb * 61;
+                                                                                }
+                                                                                {
+                                                                                  et = fo + ae;
+                                                                                  gu = 32 + 20 / 10;
+                                                                                  ap = am - ie;
+                                                                                  gb = w * gq - s;
+                                                                                  gg = 42 - cq;
+                                                                                  et = ft / 60;
+                                                                                }
+                                                                                j = fw / 60 + hs;
+                                                                                dk = 100 + fu;
+                                                                                ic = 75 + fv + bi;
+                                                                              }
+                                                                              hg = 29 + ec;
+                                                                              s = gu + ek;
+                                                                              hn = aq * cp / 2;
+                                                                            }
+                                                                          }
+                                                                          {
+                                                                            bv = fr - hu + am;
+                                                                            dx = 58 + dt / 3;
+                                                                            fn = y;
+                                                                            ba = bg + ir;
+                                                                          }
+                                                                          s = es;
+                                                                        }
+                                                                        {
+                                                                          {
+                                                                            ed = hb + gt;
+                                                                            fx = w * 53 + hs;
+                                                                            gh = bv;
+                                                                            gh = ir;
+                                                                          }
+                                                                          by = hy;
+                                                                          {
+                                                                            ek = bg - 95;
+                                                                            bb = ew;
+                                                                            ew = 97 + hg;
+                                                                            dm = k;
+                                                                          }
+                                                                          bd = ac / 22 * hh;
+                                                                        }
+                                                                        {
+                                                                          bz = 6 / 9;
+                                                                          bn = cm;
+                                                                          cu = y - cj;
+                                                                          gi = l / 23 / 75;
+                                                                          bw = h / 13;
+                                                                          cf = 23 - 20;
+                                                                        }
+                                                                      }
+                                                                      id = ae / 12 - 100;
+                                                                    }
+                                                                    hv = 28 - cy / 36;
+                                                                    t = ac * 48 / 23;
+                                                                  }
+                                                                  ex = ie + w;
+                                                                }
+                                                                gc = cb + gj;
+                                                                {
+                                                                  ex = y / 100 + cj;
+                                                                  {
+                                                                    gc = gj + hq / 22;
+                                                                    a = gc + 31;
+                                                                    ft = dm + 90;
+                                                                    {
+                                                                      dx = di + 34 - bi;
+                                                                      {
+                                                                        dv = ft * 14;
+                                                                        fa = q / 3;
+                                                                        p = x;
+                                                                        p = dp / 55 * 14;
+                                                                      }
+                                                                      ii = be;
+                                                                      ac = x * bv * 98;
+                                                                      bd = gq * dm;
+                                                                      bi = fs - at;
+                                                                    }
+                                                                    hf = de - 78 - ae;
+                                                                    fu = 15 - hb;
+                                                                  }
+                                                                  ah = 99 - as;
+                                                                  eo = ac / 62;
+                                                                  ev = fw;
+                                                                }
+                                                                ee = 8 + 64;
+                                                                ck = bo + 86 - fq;
+                                                                fy = 70 - 25 + 27;
+                                                              }
+                                                              hh = ew - 63 * bi;
+                                                            }
+                                                            fh = fz * he;
+                                                            {
+                                                              eq = 21 - cb;
+                                                              g = ey / 24;
+                                                              cs = 8 * y;
+                                                              iu = x * ie + fr;
+                                                              r = dp + dr - cq;
+                                                              ij = cb * hq + 5;
+                                                              id = 52 - x + dm;
+                                                            }
+                                                            fq = be * ir;
+                                                            fo = ge * cy;
+                                                            hq = cj / 1;
+                                                          }
+                                                          fs = cg;
+                                                          gr = 88 / 78;
+                                                        }
+                                                        di = 34 + fr - fr;
+                                                        bd = 57 - ft;
+                                                      }
+                                                      gy = 4 / 97;
+                                                      dk = gj;
+                                                      {
+                                                        gs = am - hy * hb;
+                                                        cg = ae * by;
+                                                        gw = di - 11 + 64;
+                                                        fc = be / 86;
+                                                        w = 35;
+                                                        bo = dp + di;
+                                                        hg = gj * ir / 74;
+                                                      }
+                                                    }
+                                                    be = 37 * di * 30;
+                                                    gz = gu - hy;
+                                                    {
+                                                      gl = 100;
+                                                      ft = 93 / 94 / 89;
+                                                      ek = 42 / 73 * cq;
+                                                      au = bk + 5;
+                                                      fm = 15 * ha;
+                                                      be = 46;
+                                                    }
+                                                    dp = ae - cj + 34;
+                                                  }
+                                                  ik = cg + hg - hq;
+                                                }
+                                                eh = 14;
+                                                {
+                                                  cn = bi / 15;
+                                                  eu = 14 + df + 82;
+                                                  ga = gu / 2;
+                                                  cn = fr - am;
+                                                }
+                                              }
+                                              ce = h + 84;
+                                              fm = by * df / 56;
+                                              dc = 13 / 51 * hq;
+                                              bd = hq + 59 - 24;
+                                              ex = 88 + hy * 22;
+                                            }
+                                          }
+                                          {
+                                            fj = hq * ie;
+                                            z = 37;
+                                            bp = di / 8;
+                                          }
+                                        }
+                                        {
+                                          hy = w + 100 / 68;
+                                          w = ie - 21;
+                                          {
+                                            eg = 66 / 35;
+                                            bd = eg - 37;
+                                            dk = 28 * gu / 25;
+                                            an = ac + dr;
+                                            {
+                                              {
+                                                cq = an;
+                                                ce = an;
+                                                bg = 28;
+                                                n = di * w / 14;
+                                                c = de;
+                                              }
+                                              id = 94 - eg;
+                                              {
+                                                {
+                                                  be = ac * 40;
+                                                  bg = dy / 84;
+                                                  id = an + fw - 41;
+                                                  ej = 71;
+                                                }
+                                                es = de * cm - gj;
+                                                {
+                                                  ah = cj - es - 25;
+                                                  cd = cg + 3;
+                                                  fe = bv - ie / 3;
+                                                }
+                                                br = ie;
+                                              }
+                                              co = ie * id;
+                                              ar = hh * cb - id;
+                                            }
+                                            dc = 24 + 26;
+                                          }
+                                          eo = 91 / 46;
+                                          ao = gj + h * ie;
+                                          ea = 83 + di * ie;
+                                          ea = df + cb;
+                                        }
+                                        fj = hy;
+                                      }
+                                      cj = 19 * 51;
+                                    }
+                                    ib = 9 + 39 * fr;
+                                    k = bv / 16;
+                                    {
+                                      q = k + ib;
+                                      bn = if + cc;
+                                      ex = 6 * 51 - ie;
+                                      bz = 32 / 38 * hy;
+                                      hh = cq * q * az;
+                                      ab = 77;
+                                      aw = fo;
+                                    }
+                                  }
+                                  il = hq / 25;
+                                  fb = 68 - 2;
+                                  w = ie - cj / 59;
+                                  ex = dr / 98;
+                                }
+                                fe = gu;
+                                df = 81 / 66;
+                              }
+                              ex = 84 * cb * dr;
+                            }
+                            fr = h;
+                            c = 19 - 93;
+                          }
+                          ak = 28 / 87;
+                          bc = hu;
+                          {
+                            gt = h;
+                            eb = 68 + fq + ew;
+                            aa = 91 + gu;
+                            k = cj + cb * fw;
+                          }
+                          {
+                            {
+                              hy = hy * h * ak;
+                              cq = 1 / 78;
+                              ca = x / 8;
+                              fh = ae / 52 + cm;
+                              ci = bv - bv / 37;
+                            }
+                            da = hh * 50;
+                            eh = d + ic - ee;
+                            by = da + ae;
+                          }
+                        }
+                        s = cq + h;
+                      }
+                    }
+                    {
+                      df = gu - 92;
+                      {
+                        es = dt - hy;
+                        fa = cb * 12 * k;
+                        ba = gu;
+                        dp = 10 + x;
+                      }
+                      ew = gu + x;
+                      id = o + ds;
+                      ex = 76 + fw;
+                      fj = dk + 11;
+                    }
+                    bt = cq - 79;
+                    ed = gu / 3;
+                  }
+                }
+                {
+                  hz = dr + 88 + fw;
+                  hd = 100;
+                  {
+                    av = 56 + cb;
+                    {
+                      ir = df * hd;
+                      ac = fr - dr;
+                      be = 38;
+                    }
+                    fr = 69;
+                    ez = 95 - 87 * 57;
+                  }
+                  ar = r;
+                }
+                ct = dr + cb;
+                {
+                  dc = 47 - fr;
+                  r = 83 - 35;
+                  hd = j * 39;
+                  gz = ct;
+                  df = dc * gz;
+                  aq = ia * k;
+                }
+              }
+              bc = dr * 7;
+              fj = 49 - 93 - ag;
+              fn = gu + cb;
+              y = en / 89;
+            }
+            {
+              hk = 6 * 75 * 47;
+              bf = cb / 2;
+              cb = gu * fr * cb;
+              {
+                cf = 15 + dr;
+                gu = dr * fr;
+                {
+                  gb = x - x;
+                  {
+                    ia = gu + 52 * 42;
+                    ec = gb;
+                    ib = ha / 30;
+                    il = cb / 56;
+                    bu = 84 + 79 - gb;
+                    dr = il;
+                  }
+                  gu = 69 + dr;
+                  en = 17 + cs;
+                  du = 19 * cb + hk;
+                  hm = 44 * gq;
+                  ij = 17;
+                }
+                dz = 19 + 83;
+              }
+              el = bf / 15;
+              q = 11;
+              bf = dr - 5 / 2;
+            }
+            bk = ab / 49 * ao;
+          }
+          {
+            bi = ay;
+            {
+              ip = bi;
+              iq = 6 + cb;
+              ck = iq * be;
+              dc = 30 + x;
+            }
+            ct = bi - 37 + gu;
+            be = ik / 14 - 22;
+          }
+        }
+        gu = x / 61;
+        x = 87 - be;
+      }
+      hw = be - be;
+      fr = 74 * hw;
+      hw = fr + 48;
+      x = 13 + fr + fr;
+      fb = hw;
+      {
+        x = fb + 38;
+        co = x / 35 + gu;
+        hw = 88 + 8 + gu;
+        bu = gq - 76;
+        bq = 1 / 60;
+        fr = be / 26;
+      }
+    }
+    fp = be;
+    {
+      ei = fp + gu / 82;
+      gu = be - 96;
+      ht = gu + be;
+      dq = gu - be * ht;
+      be = 98 - 96;
+      fm = 9;
+    }
+  }
+  be = be * 52;
+  bk = l;
+}
+ch = be / 62;

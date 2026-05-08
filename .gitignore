@@ -1,0 +1,7 @@
+# *.program
+# *.output
+.metals
+project
+target
+.idea
+.vscode
