@@ -1,9 +1,42 @@
 # random-farrow-ubd-program
-Random program to test time complexity of Farrow's UBD example
+Random programs to benchmark the time complexity of Farrow's use-before-declaration (UBD) example across three APS evaluator implementations: **dynamic**, **static**, and **synth**.
 
 See [this grammar](https://github.com/boyland/aps/blob/master/examples/farrow-ubd.y)
 
-Example
+## Repository structure
+
+| Path | Description |
+|------|-------------|
+| `get_farrow.py` | Generates a random Farrow-UBD program at a given nesting depth |
+| `gen_programs.sh` | Generates `10.program` … `100.program` (depths 10–100, step 10) |
+| `run_all.sh` | Runs every `*.program` against all three evaluators, saves outputs and timing logs, then diffs results |
+| `check_outputs.sh` | Compares `dynamic/`, `static/`, and `synth/` outputs for correctness |
+| `*.program` | Generated test programs (committed) |
+| `dynamic/` `static/` `synth/` | **Generated — not committed** (ignored by `.gitignore`) |
+
+## Usage
+
+### 1. Generate programs
+```bash
+./gen_programs.sh
+```
+
+### 2. Run all evaluators and compare
+```bash
+./run_all.sh
+```
+This will:
+- Run each `*.program` with `EVALUATOR=DYNAMIC`, `STATIC`, and `SYNTH` via `make FarrowUbdDriver.run`
+- Save outputs to `dynamic/*.program.output`, `static/*.program.output`, `synth/*.program.output`
+- Write per-evaluator timing logs: `dynamic/timing-dynamic.log`, `static/timing-static.log`, `synth/timing-synth.log`
+- Run `check_outputs.sh` to diff all three sets of outputs
+
+### 3. Check outputs only
+```bash
+./check_outputs.sh
+```
+
+## Example program (depth=1)
 ```
 // Validating Farrow's use-before-declaration (depth=1, vars=10)
 {
