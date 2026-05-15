@@ -5,3 +5,6 @@ project
 target
 .idea
 .vscode
+dynamic/
+static/
+synth/
