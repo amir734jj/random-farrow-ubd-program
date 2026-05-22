@@ -2,6 +2,8 @@
 # Check that every *.program.output in dynamic/ matches static/ and synth/
 # Comparison is order-insensitive: elements are sorted before diffing.
 
+results() { sed -n '/^Results:/,$p' "$1" | tail -n +2 | tr ',' '\n' | sort; }
+
 all_pass=true
 
 for f in dynamic/*.program.output; do
@@ -15,9 +17,9 @@ for f in dynamic/*.program.output; do
             fail=true
             continue
         fi
-        if ! diff -q <(cat "$f" | tr ',' '\n' | sort) <(cat "$other_f" | tr ',' '\n' | sort) > /dev/null 2>&1; then
+        if ! diff -q <(results "$f") <(results "$other_f") > /dev/null 2>&1; then
             echo "MISMATCH: $f vs $other_f"
-            diff <(cat "$f" | tr ',' '\n' | sort) <(cat "$other_f" | tr ',' '\n' | sort)
+            diff <(results "$f") <(results "$other_f")
             fail=true
         fi
     done

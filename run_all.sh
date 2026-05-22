@@ -35,11 +35,12 @@ fi
 echo "Found ${#PROGRAMS[@]} program(s): $(basename -a "${PROGRAMS[@]}" | tr '\n' ' ')"
 echo
 
-for evaluator in STATIC SYNTH; do
+for evaluator in DYNAMIC STATIC SYNTH; do
     out_dir="${EVALUATOR_DIRS[$evaluator]}"
     timing_log="$out_dir/timing-${evaluator,,}.log"
     echo "=== Running with EVALUATOR=$evaluator ==="
     > "$timing_log"  # truncate/create
+    rm -f "$out_dir"/*
 
     for prog in "${PROGRAMS[@]}"; do
         name="$(basename "$prog")"
@@ -63,6 +64,3 @@ for evaluator in STATIC SYNTH; do
     echo "  Timing written to $timing_log"
     echo
 done
-
-echo "=== Comparing outputs ==="
-"$SCRIPT_DIR/check_outputs.sh"

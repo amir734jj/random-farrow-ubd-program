@@ -2,7 +2,10 @@ import random
 import string
 import argparse
 from enum import Enum
+import sys
 
+# print(sys.getrecursionlimit())
+sys.setrecursionlimit(100000)
 
 class Kind(Enum):
     GOOD = "good"
