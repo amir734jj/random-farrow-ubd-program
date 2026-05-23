@@ -5,7 +5,7 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-APS_DIR="/home/amir/workspace/synth-functions-pr-final/examples/scala"
+APS_DIR="/workspace/aps/examples/scala"
 
 # Verify the APS directory exists
 if [[ ! -d "$APS_DIR" ]]; then
@@ -46,21 +46,23 @@ for evaluator in DYNAMIC STATIC SYNTH; do
         name="$(basename "$prog")"
         out_file="$out_dir/${name}.output"
 
-        echo -n "  $name -> $evaluator ... "
-        start=$(date +%s%3N)
-        if make -C "$APS_DIR" --no-print-directory \
-               EVALUATOR="$evaluator" ARGS="$prog" \
-               NestedUbdDriver.run > "$out_file" 2>&1; then
-            status="OK"
-        else
-            status="FAILED (exit $?)"
-        fi
-        end=$(date +%s%3N)
-        elapsed_ms=$(( end - start ))
-        elapsed=$(printf "%.3f" "$(echo "scale=3; $elapsed_ms / 1000" | bc)")
-        echo "$name: $elapsed seconds" >> "$timing_log"
-        echo "$status (${elapsed}s)"
+        (
+            start=$(date +%s%3N)
+            if make -C "$APS_DIR" --no-print-directory \
+                   EVALUATOR="$evaluator" ARGS="$prog" \
+                   NestedUbdDriver.run > "$out_file" 2>&1; then
+                status="OK"
+            else
+                status="FAILED (exit $?)"
+            fi
+            end=$(date +%s%3N)
+            elapsed_ms=$(( end - start ))
+            elapsed=$(printf "%.3f" "$(echo "scale=3; $elapsed_ms / 1000" | bc)")
+            echo "$name: $elapsed seconds" >> "$timing_log"
+            echo "  $name -> $evaluator ... $status (${elapsed}s)"
+        ) &
     done
+    wait
     echo "  Timing written to $timing_log"
     echo
 done
