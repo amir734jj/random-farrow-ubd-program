@@ -1,5 +1,3 @@
-# *.program
-# *.output
 .metals
 project
 target
@@ -8,3 +6,5 @@ target
 dynamic/
 static/
 synth/
+programs/
+__pycache__/

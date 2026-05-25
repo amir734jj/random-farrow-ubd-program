@@ -7,33 +7,55 @@ See [this grammar](https://github.com/boyland/aps/blob/master/examples/farrow-ub
 
 | Path | Description |
 |------|-------------|
+| `main.py` | CLI entry point — run `python3 main.py <command>` |
 | `get_farrow.py` | Generates a random Farrow-UBD program at a given nesting depth |
-| `gen_programs.sh` | Generates `10.program` … `100.program` (depths 10–100, step 10) |
-| `run_all.sh` | Runs every `*.program` against all three evaluators, saves outputs and timing logs, then diffs results |
-| `check_outputs.sh` | Compares `dynamic/`, `static/`, and `synth/` outputs for correctness |
-| `*.program` | Generated test programs (committed) |
-| `dynamic/` `static/` `synth/` | **Generated — not committed** (ignored by `.gitignore`) |
+| `programs/` | **Generated** — test program files (ignored by `.gitignore`) |
+| `dynamic/` `static/` `synth/` | **Generated** — per-program result folders (ignored by `.gitignore`) |
 
 ## Usage
 
 ### 1. Generate programs
 ```bash
-./gen_programs.sh
+python3 main.py generate                        # depths 10–100 step 10
+python3 main.py generate --start 10 --stop 500 --step 10
+python3 main.py generate --force                # overwrite existing
 ```
 
-### 2. Run all evaluators and compare
+### 2. Run all evaluators
 ```bash
-./run_all.sh
+python3 main.py run                             # all evaluators, auto batch size
+python3 main.py run -j 4                        # limit to 4 parallel jobs
+python3 main.py run -e STATIC DYNAMIC           # specific evaluators only
 ```
 This will:
-- Run each `*.program` with `EVALUATOR=DYNAMIC`, `STATIC`, and `SYNTH` via `make FarrowUbdDriver.run`
-- Save outputs to `dynamic/*.program.output`, `static/*.program.output`, `synth/*.program.output`
-- Write per-evaluator timing logs: `dynamic/timing-dynamic.log`, `static/timing-static.log`, `synth/timing-synth.log`
-- Run `check_outputs.sh` to diff all three sets of outputs
+- Compile once per evaluator via `make`
+- Run each program in parallel batches
+- Store results per program in `<evaluator>/<program>/` folders
+- Skip programs that already succeeded with the same input hash
 
-### 3. Check outputs only
+Each program folder contains:
+```
+dynamic/10.program/
+  hash      # sha256 of the input .program file
+  output    # full stdout+stderr (streamed directly to disk)
+  time      # elapsed seconds
+```
+
+### 3. Compare outputs across evaluators
 ```bash
-./check_outputs.sh
+python3 main.py check                           # compare against dynamic
+python3 main.py check --reference static        # compare against static
+```
+
+### 4. Show timing table
+```bash
+python3 main.py times
+```
+
+### 5. Clean generated files
+```bash
+python3 main.py clean                           # remove output directories
+python3 main.py clean --programs                # also remove programs/
 ```
 
 ## Example program (depth=1)
