@@ -11,7 +11,7 @@ Commands:
 """
 
 import argparse
-import hashlib
+import difflib
 import os
 import random
 import string
@@ -43,8 +43,9 @@ class ProgramGenerator:
         DUP = "dup"
         BLOCK = "block"
 
-    def __init__(self, depth=2):
+    def __init__(self, depth=2, no_siblings=False):
         self.depth = depth
+        self.no_siblings = no_siblings
         self.num_vars = 5 + depth * 5
         self.var_pool = self._make_var_pool(self.num_vars)
 
@@ -98,7 +99,27 @@ class ProgramGenerator:
         local_declared = set(declared)
         max_depth_reached = current_depth
 
-        if current_depth < self.depth:
+        if self.no_siblings:
+            # farrow-ubd grammar: at most one block, always first, no siblings before it
+            if current_depth < self.depth:
+                decl_kinds = [
+                    random.choices([Kind.GOOD, Kind.UBD, Kind.DUP], weights=[50, 25, 25])[0]
+                    for _ in range(num_stmts - 1)
+                ]
+                if must_reach:
+                    kinds = [Kind.BLOCK] + decl_kinds
+                elif random.random() < 0.3:
+                    kinds = [Kind.BLOCK] + decl_kinds
+                else:
+                    kinds = decl_kinds + [
+                        random.choices([Kind.GOOD, Kind.UBD, Kind.DUP], weights=[50, 25, 25])[0]
+                    ]
+            else:
+                kinds = [
+                    random.choices([Kind.GOOD, Kind.UBD, Kind.DUP], weights=[50, 25, 25])[0]
+                    for _ in range(num_stmts)
+                ]
+        elif current_depth < self.depth:
             if must_reach:
                 kinds = [Kind.BLOCK] + [
                     random.choices([Kind.GOOD, Kind.UBD, Kind.DUP, Kind.BLOCK], weights=[50, 17, 17, 16])[0]
@@ -162,26 +183,24 @@ class ProgramGenerator:
 # Utilities
 # ---------------------------------------------------------------------------
 
-def sha256_file(path: Path) -> str:
-    h = hashlib.sha256()
-    with open(path, "rb") as f:
-        for chunk in iter(lambda: f.read(8192), b""):
-            h.update(chunk)
-    return h.hexdigest()
-
-
 def result_dir(evaluator: str, program_name: str) -> Path:
     return ROOT_DIR / evaluator.lower() / program_name
 
 
 def is_done(evaluator: str, prog: Path) -> bool:
     d = result_dir(evaluator, prog.name)
-    hash_file = d / "hash"
     output_file = d / "output"
     time_file = d / "time"
-    if not (hash_file.exists() and output_file.exists() and time_file.exists()):
-        return False
-    return hash_file.read_text().strip() == sha256_file(prog)
+    return output_file.exists() and time_file.exists()
+
+
+def extract_results(path: Path) -> str:
+    """Return everything after the first line containing 'Results'."""
+    lines = path.read_text().splitlines()
+    for i, line in enumerate(lines):
+        if "Results" in line:
+            return "\n".join(lines[i + 1:])
+    return "\n".join(lines)
 
 
 # ---------------------------------------------------------------------------
@@ -212,6 +231,8 @@ class GenerateCommand(Command):
         parser.add_argument("--stop", type=int, default=100, help="Ending depth (default: 100)")
         parser.add_argument("--step", type=int, default=10, help="Depth step (default: 10)")
         parser.add_argument("--force", action="store_true", help="Overwrite existing programs")
+        parser.add_argument("--no-siblings", action="store_true",
+                            help="No sibling decls before a block (farrow-ubd grammar)")
 
     def run(self, args):
         PROGRAMS_DIR.mkdir(exist_ok=True)
@@ -223,7 +244,7 @@ class GenerateCommand(Command):
                 print(f"  {out.name} already exists, skipping")
                 continue
             print(f"  Generating {out.name} (depth={depth}) ...")
-            out.write_text(ProgramGenerator(depth).generate() + "\n")
+            out.write_text(ProgramGenerator(depth, no_siblings=args.no_siblings).generate() + "\n")
 
         print(f"Done. {len(list(PROGRAMS_DIR.glob('*.program')))} program(s) in {PROGRAMS_DIR}")
 
@@ -239,6 +260,7 @@ class RunCommand(Command):
     def configure(self, parser):
         parser.add_argument("-j", "--jobs", type=int, default=0, help="Parallel jobs (default: cpu count)")
         parser.add_argument("-e", "--evaluators", nargs="+", help="Evaluators to run (default: all)")
+        parser.add_argument("--aps-dir", type=Path, default=APS_DIR, help=f"APS directory (default: {APS_DIR})")
 
     @staticmethod
     def _run_one(prog: Path, evaluator: str, aps_dir: Path) -> dict:
@@ -251,7 +273,6 @@ class RunCommand(Command):
         d.mkdir(parents=True, exist_ok=True)
 
         output_file = d / "output"
-        hash_file = d / "hash"
         time_file = d / "time"
 
         cmd = ["make", "--no-print-directory",
@@ -266,16 +287,13 @@ class RunCommand(Command):
         status = "OK" if result.returncode == 0 else f"FAILED (exit {result.returncode})"
 
         time_file.write_text(f"{elapsed:.3f}\n")
-        if result.returncode == 0:
-            hash_file.write_text(sha256_file(prog) + "\n")
-        else:
-            hash_file.unlink(missing_ok=True)
 
         return {"name": name, "evaluator": evaluator, "status": status, "elapsed": elapsed}
 
     def run(self, args):
-        if not APS_DIR.is_dir():
-            print(f"ERROR: APS directory not found: {APS_DIR}", file=sys.stderr)
+        aps_dir = args.aps_dir
+        if not aps_dir.is_dir():
+            print(f"ERROR: APS directory not found: {aps_dir}", file=sys.stderr)
             sys.exit(1)
 
         programs = sorted(PROGRAMS_DIR.glob("*.program"), key=lambda p: int(p.stem))
@@ -296,18 +314,18 @@ class RunCommand(Command):
 
             subprocess.run(
                 ["make", "--no-print-directory", f"EVALUATOR={evaluator}", "clean"],
-                cwd=APS_DIR, check=True,
+                cwd=aps_dir, check=True,
             )
             subprocess.run(
                 ["make", "--no-print-directory", f"EVALUATOR={evaluator}", "NestedUbdDriver.class"],
-                cwd=APS_DIR, check=True,
+                cwd=aps_dir, check=True,
             )
 
-            aps_dir = APS_DIR.resolve()
+            resolved_aps_dir = aps_dir.resolve()
 
             with ThreadPoolExecutor(max_workers=batch_size) as executor:
                 futures = [
-                    executor.submit(self._run_one, prog, evaluator, aps_dir)
+                    executor.submit(self._run_one, prog, evaluator, resolved_aps_dir)
                     for prog in programs
                 ]
                 for future in as_completed(futures):
@@ -331,6 +349,7 @@ class CheckCommand(Command):
 
     def configure(self, parser):
         parser.add_argument("--reference", default="dynamic", help="Reference evaluator (default: dynamic)")
+        parser.add_argument("-v", "--verbose", action="store_true", help="Show unified diff for mismatches")
 
     def run(self, args):
         reference = args.reference.lower()
@@ -353,7 +372,7 @@ class CheckCommand(Command):
             if not ref_output.exists():
                 continue
 
-            ref_hash = sha256_file(ref_output)
+            ref_results = extract_results(ref_output)
             fail = False
 
             for other in others:
@@ -361,8 +380,17 @@ class CheckCommand(Command):
                 if not other_output.exists():
                     print(f"  MISSING: {name} in {other}")
                     fail = True
-                elif sha256_file(other_output) != ref_hash:
+                elif extract_results(other_output) != ref_results:
                     print(f"  MISMATCH: {name} ({reference} vs {other})")
+                    if args.verbose:
+                        diff = difflib.unified_diff(
+                            ref_results.splitlines(keepends=True),
+                            extract_results(other_output).splitlines(keepends=True),
+                            fromfile=f"{reference}/{name}/output",
+                            tofile=f"{other}/{name}/output",
+                        )
+                        sys.stdout.writelines(diff)
+                        print()
                     fail = True
 
             if not fail:
