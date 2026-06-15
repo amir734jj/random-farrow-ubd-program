@@ -261,9 +261,11 @@ class RunCommand(Command):
         parser.add_argument("-j", "--jobs", type=int, default=0, help="Parallel jobs (default: cpu count)")
         parser.add_argument("-e", "--evaluators", nargs="+", help="Evaluators to run (default: all)")
         parser.add_argument("--aps-dir", type=Path, default=APS_DIR, help=f"APS directory (default: {APS_DIR})")
+        parser.add_argument("--driver", default="NestedUbdDriver",
+                            help="Driver class name (default: NestedUbdDriver)")
 
     @staticmethod
-    def _run_one(prog: Path, evaluator: str, aps_dir: Path) -> dict:
+    def _run_one(prog: Path, evaluator: str, aps_dir: Path, driver: str) -> dict:
         name = prog.name
 
         if is_done(evaluator, prog):
@@ -277,7 +279,7 @@ class RunCommand(Command):
 
         cmd = ["make", "--no-print-directory",
                f"EVALUATOR={evaluator}", f"ARGS={prog}",
-               "NestedUbdDriver.run"]
+               f"{driver}.run"]
 
         start = time.monotonic()
         with open(output_file, "w") as out_f:
@@ -303,8 +305,9 @@ class RunCommand(Command):
 
         batch_size = args.jobs or os.cpu_count() or 4
         evaluators = [e.upper() for e in args.evaluators] if args.evaluators else EVALUATORS
+        driver = args.driver
 
-        print(f"Found {len(programs)} program(s), batch size {batch_size}")
+        print(f"Found {len(programs)} program(s), batch size {batch_size}, driver {driver}")
         print()
 
         for evaluator in evaluators:
@@ -317,7 +320,7 @@ class RunCommand(Command):
                 cwd=aps_dir, check=True,
             )
             subprocess.run(
-                ["make", "--no-print-directory", f"EVALUATOR={evaluator}", "NestedUbdDriver.class"],
+                ["make", "--no-print-directory", f"EVALUATOR={evaluator}", f"{driver}.class"],
                 cwd=aps_dir, check=True,
             )
 
@@ -325,7 +328,7 @@ class RunCommand(Command):
 
             with ThreadPoolExecutor(max_workers=batch_size) as executor:
                 futures = [
-                    executor.submit(self._run_one, prog, evaluator, resolved_aps_dir)
+                    executor.submit(self._run_one, prog, evaluator, resolved_aps_dir, driver)
                     for prog in programs
                 ]
                 for future in as_completed(futures):
