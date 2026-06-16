@@ -314,6 +314,7 @@ class RunCommand(Command):
             (ROOT_DIR / evaluator.lower()).mkdir(exist_ok=True)
 
             print(f"=== Running with EVALUATOR={evaluator} ===")
+            print(f"aps_dir: {aps_dir}")
 
             subprocess.run(
                 ["make", "--no-print-directory", f"EVALUATOR={evaluator}", "clean"],

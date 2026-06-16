@@ -3,6 +3,35 @@ Random programs to benchmark the time complexity of Farrow's use-before-declarat
 
 See [this grammar](https://github.com/boyland/aps/blob/master/examples/farrow-ubd.y)
 
+
+```bash
+#
+python3 main.py clean --programs
+python3 main.py generate --no-siblings
+python3 main.py run --aps-dir ~/workspace/aps-june15/examples/scala --driver FarrowUbdDriver
+python3 main.py check
+python3 main.py times
+
+python3 main.py clean --programs
+python3 main.py generate --no-siblings
+python3 main.py run --aps-dir ~/workspace/aps-june15/examples/scala --driver FarrowUbdFiberDriver
+python3 main.py check
+python3 main.py times
+
+python3 main.py clean --programs
+python3 main.py generate
+python3 main.py run --aps-dir ~/workspace/aps-june15/examples/scala --driver NestedUbdDriver
+python3 main.py check
+python3 main.py times
+
+python3 main.py clean --programs
+python3 main.py generate
+python3 main.py run --aps-dir ~/workspace/aps-june15/examples/scala --driver NestedUbdFiberDriver
+python3 main.py check
+python3 main.py times
+```
+
+
 ## Repository structure
 
 | Path | Description |
