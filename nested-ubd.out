@@ -1,0 +1,33 @@
+  MISMATCH: 10.program (dynamic vs synth)
+  MISMATCH: 20.program (dynamic vs synth)
+  MISMATCH: 30.program (dynamic vs synth)
+  MISMATCH: 40.program (dynamic vs synth)
+  MISMATCH: 50.program (dynamic vs synth)
+  MISMATCH: 60.program (dynamic vs synth)
+  MISMATCH: 70.program (dynamic vs synth)
+  MISMATCH: 80.program (dynamic vs synth)
+  MISMATCH: 90.program (dynamic vs synth)
+  MISMATCH: 100.program (dynamic vs synth)
+  MISMATCH: 110.program (dynamic vs synth)
+  MISMATCH: 120.program (dynamic vs synth)
+  MISMATCH: 130.program (dynamic vs synth)
+  MISMATCH: 140.program (dynamic vs synth)
+  MISMATCH: 150.program (dynamic vs synth)
+
+Program       DYNAMIC       STATIC        SYNTH         
+-------       -------       -------       -------       
+10.program    1.082s        1.209s        0.912s        
+20.program    1.369s        1.469s        1.300s        
+30.program    1.367s        1.452s        1.365s        
+40.program    1.810s        1.974s        1.592s        
+50.program    1.839s        2.145s        1.817s        
+60.program    2.431s        2.809s        2.281s        
+70.program    2.927s        3.301s        2.716s        
+80.program    3.538s        3.870s        3.113s        
+90.program    5.320s        6.129s        5.008s        
+100.program   6.576s        7.551s        6.185s        
+110.program   5.109s        5.558s        4.566s        
+120.program   5.532s        6.353s        5.003s        
+130.program   8.561s        9.357s        7.856s        
+140.program   9.910s        10.915s       9.362s        
+150.program   12.532s       13.564s       11.892s       

@@ -1,0 +1,35 @@
+  OK: 10.program
+  OK: 20.program
+  OK: 30.program
+  OK: 40.program
+  OK: 50.program
+  OK: 60.program
+  OK: 70.program
+  OK: 80.program
+  OK: 90.program
+  OK: 100.program
+  OK: 110.program
+  OK: 120.program
+  OK: 130.program
+  OK: 140.program
+  OK: 150.program
+
+All outputs match.
+
+Program       DYNAMIC       STATIC        SYNTH         
+-------       -------       -------       -------       
+10.program    1.118s        1.132s        1.213s        
+20.program    1.116s        1.013s        1.192s        
+30.program    1.343s        1.205s        1.299s        
+40.program    1.753s        1.575s        1.695s        
+50.program    2.565s        2.416s        2.450s        
+60.program    3.147s        2.802s        2.965s        
+70.program    3.178s        2.887s        2.989s        
+80.program    2.701s        2.560s        2.628s        
+90.program    3.901s        3.335s        3.666s        
+100.program   5.465s        4.799s        4.952s        
+110.program   5.687s        5.038s        5.201s        
+120.program   6.060s        5.433s        5.661s        
+130.program   10.476s       8.977s        9.212s        
+140.program   8.989s        7.896s        8.062s        
+150.program   9.852s        8.771s        8.795s        

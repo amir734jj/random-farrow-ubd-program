@@ -27,7 +27,7 @@ sys.setrecursionlimit(100000)
 ROOT_DIR = Path(__file__).resolve().parent
 APS_DIR = ROOT_DIR / ".." / "aps" / "examples" / "scala"
 PROGRAMS_DIR = ROOT_DIR / "programs"
-EVALUATORS = ["DYNAMIC", "STATIC"]
+EVALUATORS = ["DYNAMIC", "STATIC", "SYNTH"]
 
 
 # ---------------------------------------------------------------------------
