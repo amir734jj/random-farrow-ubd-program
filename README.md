@@ -5,31 +5,29 @@ See [this grammar](https://github.com/boyland/aps/blob/master/examples/farrow-ub
 
 
 ```bash
-#
 python3 main.py clean --programs
 python3 main.py generate --no-siblings
 python3 main.py run --driver FarrowUbdDriver
-python3 main.py check
-python3 main.py times
+python3 main.py check > farrow-ubd.out
+python3 main.py times >> farrow-ubd.out
 
-rm -f farrow-ubd-fiber.out
 python3 main.py clean --programs
 python3 main.py generate --no-siblings
 python3 main.py run --driver FarrowUbdFiberDriver
-python3 main.py check
-python3 main.py times
+python3 main.py check > farrow-ubd-fiber.out
+python3 main.py times >> farrow-ubd-fiber.out
 
 python3 main.py clean --programs
 python3 main.py generate
 python3 main.py run --driver NestedUbdDriver
-python3 main.py check
-python3 main.py times
+python3 main.py check > nested-ubd.out
+python3 main.py times >> nested-ubd.out
 
 python3 main.py clean --programs
 python3 main.py generate
 python3 main.py run --driver NestedUbdFiberDriver
-python3 main.py check
-python3 main.py times
+python3 main.py check > nested-ubd-fiber.out
+python3 main.py times >> nested-ubd-fiber.out
 ```
 
 
