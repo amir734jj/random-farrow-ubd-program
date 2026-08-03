@@ -1,3 +1,4 @@
+# Result for NestedUbdFiberDriver
   OK: 10.program
   OK: 20.program
   OK: 30.program
@@ -12,13 +13,13 @@
 All outputs match.
 Program       DYNAMIC       STATIC        SYNTH         
 -------       -------       -------       -------       
-10.program    3.020s        3.552s        3.635s        
-20.program    3.484s        3.774s        3.418s        
-30.program    5.489s        5.180s        4.860s        
-40.program    4.184s        5.154s        4.308s        
-50.program    8.837s        7.479s        6.539s        
-60.program    9.110s        8.388s        8.817s        
-70.program    10.113s       9.824s        9.421s        
-80.program    15.639s       12.638s       15.393s       
-90.program    15.286s       13.988s       12.518s       
-100.program   15.404s       15.536s       13.810s       
+10.program    3.173s        2.869s        3.213s        
+20.program    3.793s        3.145s        3.199s        
+30.program    3.915s        3.401s        3.706s        
+40.program    5.299s        5.183s        5.598s        
+50.program    7.435s        8.162s        7.933s        
+60.program    7.443s        6.123s        6.572s        
+70.program    9.137s        8.493s        8.368s        
+80.program    15.449s       13.226s       12.963s       
+90.program    13.858s       14.986s       12.675s       
+100.program   17.437s       17.233s       18.009s       

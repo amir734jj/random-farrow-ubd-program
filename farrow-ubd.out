@@ -1,3 +1,4 @@
+# Result for FarrowUbdDriver
   OK: 10.program
   OK: 20.program
   OK: 30.program
@@ -12,13 +13,13 @@
 All outputs match.
 Program       DYNAMIC       STATIC        SYNTH         
 -------       -------       -------       -------       
-10.program    3.291s        3.792s        4.211s        
-20.program    4.351s        3.926s        4.273s        
-30.program    5.707s        4.547s        4.588s        
-40.program    5.820s        5.155s        7.560s        
-50.program    6.997s        6.448s        7.774s        
-60.program    9.772s        7.462s        11.161s       
-70.program    11.722s       8.119s        12.391s       
-80.program    12.796s       8.419s        13.499s       
-90.program    15.190s       6.843s        13.058s       
-100.program   14.533s       7.390s        13.996s       
+10.program    3.690s        3.681s        4.109s        
+20.program    4.617s        5.326s        4.921s        
+30.program    6.391s        5.114s        7.207s        
+40.program    7.046s        7.079s        7.612s        
+50.program    7.685s        7.023s        8.413s        
+60.program    10.655s       7.494s        10.893s       
+70.program    12.526s       7.829s        11.796s       
+80.program    14.043s       8.408s        12.770s       
+90.program    13.450s       7.521s        14.996s       
+100.program   14.823s       6.773s        15.384s       

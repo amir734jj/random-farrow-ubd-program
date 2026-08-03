@@ -11,7 +11,8 @@ run_benchmark() {
   python3 main.py clean --programs
   python3 main.py generate $gen_flags
   python3 main.py run --driver "$driver"
-  python3 main.py check > "$out"
+  echo "# Result for $driver" > "$out"
+  python3 main.py check >> "$out"
   python3 main.py times >> "$out"
 
   if grep -q 'All outputs match' "$out"; then
