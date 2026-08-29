@@ -9,7 +9,7 @@ run_benchmark() {
 
   echo "=== $driver ==="
   python3 main.py clean --programs
-  python3 main.py generate $gen_flags
+  python3 main.py generate --stop 200 $gen_flags
   python3 main.py run --driver "$driver"
   echo "# Result for $driver" > "$out"
   python3 main.py check >> "$out"
